@@ -24,7 +24,7 @@ connectMongoDB();
   try {
     await sequelize.authenticate();
     await sequelize.sync();
-    console.log("Connected to PostgreSQL database");
+    console.log("Postgres Connected");
   } catch (error) {
     console.error("Error connecting to PostgreSQL database:", error);
   }
