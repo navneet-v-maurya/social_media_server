@@ -35,6 +35,12 @@ app.get("/health_check", (req, res) => {
   res.status(200).send("Working fine!!");
 });
 
+//routes import
+import user_route from "./src/routes/auth.js";
+
+//routes
+app.use("/auth", user_route);
+
 //server
 app.listen(process.env.PORT, () => {
   console.log(`Server connected at Port: ${process.env.PORT}`);
