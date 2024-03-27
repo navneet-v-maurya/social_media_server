@@ -8,6 +8,11 @@ const Users = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    user_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,6 +37,18 @@ const Users = sequelize.define(
     gender: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    is_admin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    is_verified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    is_private: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     created_at: {
       type: DataTypes.DATE,
