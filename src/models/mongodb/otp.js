@@ -7,14 +7,21 @@ const schema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  token: {
+    type: String,
+  },
+  otp_count: {
+    type: Number,
+    default: 1,
+  },
   created_at: {
     type: Date,
-    default: Date.now(),
-    expires: 300,
+    default: Date.now,
+    expires: 1800,
   },
   updated_at: {
     type: Date,
-    default: Date.now(),
+    default: Date.now,
   },
 });
 
