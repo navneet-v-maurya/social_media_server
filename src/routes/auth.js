@@ -1,4 +1,7 @@
+//module imports
 import express from "express";
+
+//function imports
 import {
   forgot_password,
   generate_otp,

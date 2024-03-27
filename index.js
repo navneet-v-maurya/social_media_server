@@ -1,13 +1,15 @@
+//module imports
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
 import morgan from "morgan";
+
 const app = express();
 
 dotenv.config();
 
-//databse connection imports
+//database imports
 import connectMongoDB from "./src/database/mongo.js";
 import sequelize from "./src/database/postgress.js";
 

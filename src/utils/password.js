@@ -1,3 +1,4 @@
+//module imports
 import bcrypt from "bcrypt";
 
 export const encrypt = async (text) => {

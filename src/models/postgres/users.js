@@ -1,4 +1,7 @@
+//module imports
 import { DataTypes } from "sequelize";
+
+//datebase imports
 import sequelize from "../../database/postgress.js";
 
 const Users = sequelize.define(
@@ -49,6 +52,10 @@ const Users = sequelize.define(
     is_private: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
+    },
+    is_active: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
     },
     created_at: {
       type: DataTypes.DATE,

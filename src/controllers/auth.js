@@ -1,6 +1,8 @@
-import { decode } from "jsonwebtoken";
+//model imports
 import Otp from "../models/mongodb/otp.js";
 import Users from "../models/postgres/users.js";
+
+//util imports
 import { transporter } from "../utils/mail_service.js";
 import { compare, encrypt } from "../utils/password.js";
 import response_structure from "../utils/response.js";
